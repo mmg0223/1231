@@ -1,0 +1,27 @@
+package control;
+
+import java.util.Scanner;
+
+public class IfElseTest {
+
+	public static void main(String[] args) {
+		System.out.println("숫자를 입력해주세요.");
+		System.out.println("입력 > ");
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		sc.close();
+		
+		// if~else
+		// 홀수인지 짝수인지 판별하는 로직
+		if(num % 2 == 1) {
+			// 조건식의 결과가 true 일 때 실행하는 결과
+			System.out.println(num + "은 홀수입니다.");
+		} else {
+			// 조건식의 결과가 false 일 때 실행하는 결과
+			System.out.println(num + "은 짝수입니다.");
+		}
+
+	}
+
+}

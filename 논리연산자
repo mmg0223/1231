@@ -1,0 +1,45 @@
+package operators;
+
+public class LogicalTest {
+
+	public static void main(String[] args) {
+		//논리연산자(&&, ||, !) : 비트연산자랑 구분해야함
+		
+		// &&(논리곱)
+		// true, true 인 경우에만 true / 나머지는 false
+		// (true, true) == true
+		// (true, false) == false
+		// (false, true) == false
+		// (false, false) == false
+		int a = 60, b = 13, c = 10;
+		System.out.println(true && true); // true
+		// 최단산쉬 관비리삼대 - 연산 순서
+		System.out.println( a > c && b > c); //true
+		System.out.println( a > c && b <= c); //false
+		System.out.println( a < c && b > c); //false
+		System.out.println( a < c && b < c); //false
+		System.out.println("--------------");
+		
+		// || : Logical OR Operator
+		// 둘 다 false 인 경우만 false, 나머지는 true
+		System.out.println(false || false); // false
+		System.out.println( a > c || b > c); //true
+		System.out.println( a > c || b <= c); //true
+		System.out.println( a < c || b > c); //true
+		System.out.println( a < c || b < c); //false
+		System.out.println("--------------");
+		
+		System.out.println( a > c || b > c && c == 10);//true : true || true && true
+		System.out.println( a < c || b < c && c == 10);//false : false || false && true
+		System.out.println("--------------");
+		
+		// ! : Logical NOT Operator
+		System.out.println(!true); // false
+		
+		boolean flag = false;
+		System.out.println(!flag); // true
+		System.out.println(!(a<c)); // true : 괄호가 없다면 a 를 부정하는 연산식이 먼저 적용
+
+	}
+
+}

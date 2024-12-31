@@ -1,0 +1,28 @@
+package operators;
+
+public class AssignmentTest {
+
+	public static void main(String[] args) {
+		// 대입연산자
+		int num = 10;
+		System.out.println(num); // 10
+		int a = num = 100;
+		System.out.println(num); // 100
+		System.out.println(a); // 100
+		
+		// 복합대입연산자
+		a = a + 10;
+		System.out.println("a = " + a);
+		// 모든 프로그램이 싫어하는 것 : 중복 --> 간결하게 작성
+		
+		a += 5;
+		System.out.println("a => " + a);
+		// a = a - 5
+		a -= 5;
+		System.out.println("a => " + a);
+		// a = a + 1( a += 1 ), a = a - 1( a -= 1 )
+		
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package control;
+
+import java.util.Scanner;
+
+public class NestedIfTest02 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("점수를 입력해주세요.(0~100)");
+		System.out.println("입력 > ");
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		sc.close();
+		
+		// num 에는 점수 저장
+		// 90점 이상 - A, 80점 이상 - B, 70점 이상 - C, 60점 이상 - D, 그 이하는 F
+		
+		if( num >= 90 ) {
+			System.out.println(num + "점은 A입니다.");
+		}else {
+			if(num >= 80) {
+				System.out.println(num + "점은 B입니다.");
+			}else {
+				if(num >= 70) {
+					System.out.println(num + "점은 C입니다.");
+				}else {
+					if(num >= 60) {
+						System.out.println(num + "점은 D입니다.");
+					}else {
+						System.out.println(num + "점은 F입니다.");
+					}
+				}
+			}
+		}
+
+	}
+
+}

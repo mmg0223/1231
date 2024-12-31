@@ -1,0 +1,47 @@
+package operators;
+
+public class ArithmeticTest {
+
+	public static void main(String[] args) {
+		
+		//산술연산자(+, -, *, /, %, ++, --)
+		int num1 = 10, num2 = 20;
+		
+		System.out.println(num1 + num2); //30
+		System.out.println(num1 - num2); //-10
+		System.out.println(num1 * num2); //200
+		System.out.println(num1 / num2); //0.5(x) -> 0
+		// 정수 / 정수는 결과가 정수만 나옴(소수점 x)
+		System.out.println((double) num1 / num2); //0.5
+		System.out.println(num1 / (double) num2); //0.5
+		System.out.println((double) (num1 / num2)); //0.0 (괄호 안의 정수끼리의 연산 이후에 실수로 변환하기 떄문에 0.0)
+		System.out.println(num1 / num2 * 1.0); //0.0 (연산 순서에 의해 0.0)
+		System.out.println(1.0 * num1 / num2); //0.0 (연산 순서에 의해 0.5)
+		System.out.println(num1 % num2); //10(몫 : 0, 나머지 : 10)
+		//++, -- : 단항연산자
+		//1증가 연산자(변수에만 붙이기 가능)
+		System.out.println(++num1);//11 : 전위연산자(출력 전에 변화)
+		System.out.println(num1++);//11 : 후위연산자(출력 후에 변화)
+		System.out.println(num1);//12
+		
+		int a = 10;
+		System.out.println(++a + 10);//21
+		System.out.println("a=" + a);//결과적으로 a의 값은 같지만 계산 결과값이 다름
+		a= 10;
+		System.out.println(a++ + 10);//20
+		System.out.println("a=" + a);
+		
+		//1감소 연산자
+		System.out.println(num2--);//20 : 출력 이후에 감소
+		System.out.println("num2=" + num2);//num2 = 19
+		System.out.println(--num2);//18 : 출력 전에 감소
+		System.out.println("num2=" + num2);//num2 = 18
+		num2--;
+		System.out.println("num2=" + num2);//num2 = 17
+		--num2;
+		System.out.println("num2=" + num2);//num2 = 16
+		
+
+	}
+
+}

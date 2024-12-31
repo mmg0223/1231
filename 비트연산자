@@ -1,0 +1,57 @@
+package operators;
+
+public class BitwiseTest {
+
+	public static void main(String[] args) {
+		//비트연산자
+		byte a = 60; //0011 1100 : 32 + 16 + 8 + 4 == 60
+		byte b = 13; //0000 1101 : 8 + 4 + 1 == 13
+		// & : Binary AND Operator
+		// 두 개가 모두 참(true, 1) : (1, 1) == 1 나머지 조건은 모두 0
+		//(1, 0) == 0
+		//(0, 1) == 0
+		//(0, 0) == 0
+		byte result = (byte) (a & b);
+		System.out.println(result); //12 (0000 1100)
+		
+		// | : Binary OR Operator
+		// 두 개가 모두 거짓(false, 1) : (0, 0) == 0 나머지 조건은 모두 1
+		//(1, 0) == 1
+		//(0, 1) == 1
+		//(1, 1) == 1
+		result = (byte) (a | b);
+		System.out.println(result); //61 (0011 1101)
+		
+		// ^ : Binary XOR Operator
+		// 두 개가 같으면 0, 다르면 1
+		result = (byte) (a ^ b);
+		System.out.println(result); //49 (0011 0001)
+		
+		// 비트단위로 부정(0 -> 1, 1 -> 0)
+		// ~ : 부정 Binary Ones Complement Operator
+		result = (byte) (~a);
+		System.out.println(result); //-61 (1100 0011)
+		
+		// << : Binary Left Operator, 왼쪽 이동
+		//      00111100
+		//    00111100      : 빈칸은 0으로 채움
+		System.out.println(a << 2); //240 == 60*4 : int로 연산되었기 떄문
+		System.out.println((byte) (a << 2)); //-16
+		
+		// >> : Binary Right Operator, 오른쪽 이동
+		//      00111100
+		//        00111100 : 빈칸은 부호가 +면 0으로, 부호가 -면 1로 채움
+		System.out.println(a >> 2); // 15 == 60/4
+		System.out.println((byte) (a >> 2)); // 15 : 0000 1111
+		a= -60; // 1100 0100
+		System.out.println((byte) (a >> 2)); // -15 : 1111 0001
+		
+		// >>> : zero fill right shift
+		// 부호는 유지하고 값이 이동하고 0으로 채워짐
+		System.out.println((byte) (a >>> 2));//-15
+		a= 60;
+		System.out.println((byte) (a >>> 2));//15
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package control;
+
+import java.util.Scanner;
+
+public class IfTest {
+	//조건문 if, switch~case
+
+	public static void main(String[] args) {
+		//if(조건식) {}
+		System.out.println("프로그램 시작");
+		int num;
+		//클래스 이름 : Scanner 타입
+		System.out.println("숫자를 입력해주세요.");
+		System.out.println("입력 > ");
+		
+		Scanner sc = new Scanner(System.in);
+		num = sc.nextInt();
+		sc.close();
+		
+		if(num < 0) {
+			//조건을 만족했을 때의 결과
+			System.out.println("움수입니다.");
+		}
+		
+		System.out.println("프로그램 종료");
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package operators;
+
+public class RelationalTest {
+
+	public static void main(String[] args) {
+		//관계연산자 결과로 논리값을 제공(true or false)
+		int num1 = 10, num2 = 20;
+		System.out.println(num1 == num2);//false
+		
+		String str1 = "hello";
+		String str2 = "hello";
+		String str3 = new String("hello");
+		System.out.println(str1 == str2);//true
+		System.out.println(str1 == str3);//false
+		System.out.println(str1.equals(str2));//true
+		System.out.println(str1.equals(str3));//true
+		System.out.println("---");
+		
+		//not equal : != (순서가 바뀌면 안 됨)
+		System.out.println(num1 != num2);//true
+		//System.out.println(num1 =! num2); X
+		
+		System.out.println("---");
+		//A > B(A greater than B) A가 B보다 큰가?
+		System.out.println("num1 > num2 : " + (num1 > num2));//산술연산자가 먼저 계산되면 안 돼서 ()를 사용
+		//A < B(A less than B) A가 B보다 작은가?
+		System.out.println("num1 < num2 : " + (num1 < num2));
+		
+		//A >= B(A greater than or equal to B) A가 B보다 크거나 같은가?
+		System.out.println("num1 >= num2 : " + (num1 >= num2));
+		//A <= B(A less than equal to B) A가 B보다 작거나 같은가?
+		System.out.println("num1 <= num2 : " + (num1 <= num2));
+		
+		boolean result = num1 < num2;
+		System.out.println(result);//true
+
+	}
+
+}
